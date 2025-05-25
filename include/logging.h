@@ -14,9 +14,9 @@
 #define RED_COLOR_TEXT        "\x1b[38;5;196m"
 #define GREEN_COLOR_TEXT      "\x1b[32m"
 #define YELLOW_COLOR_TEXT     "\x1b[38;5;226m"
-#define BLUE_COLOR_TEXT       "\x1b[38;5;51m"
+#define BLUE_COLOR_TEXT       "\x1b[38;5;50m"
 #define MAGENTA_COLOR_TEXT    "\x1b[38;5;201m"
-#define CYAN_COLOR_TEXT       "\x1b[38;5;50m"
+#define CYAN_COLOR_TEXT       "\x1b[38;5;51m"
 #define WHITE_COLOR_TEXT      "\x1b[38;5;15m"
 #define GRAY_COLOR_TEXT       "\x1b[38;5;240m"
 #define DARK_GRAY_COLOR_TEXT  "\x1b[38;5;236m"
@@ -380,11 +380,11 @@
         time(&rawtime);                                                            \
         timeinfo = localtime(&rawtime);                                            \
         strftime(time_str, sizeof(time_str), "%Y-%m-%d %H:%M:%S", timeinfo);       \
-        printf("[ " BLUE_COLOR_TEXT "INFO " DEFAULT_COLOR_TEXT " ]  "              \
-            BLUE_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT " - ("                         \
-            BLUE_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT ") - ("                        \
-            BLUE_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT ") "                           \
-            BLUE_COLOR_TEXT _fmt DEFAULT_COLOR_TEXT "\n",                          \
+        printf("[ " TEAL_COLOR_TEXT "INFO " DEFAULT_COLOR_TEXT " ]  "              \
+            TEAL_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT " - ("                         \
+            TEAL_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT ") - ("                        \
+            TEAL_COLOR_TEXT "%s" DEFAULT_COLOR_TEXT ") "                           \
+            TEAL_COLOR_TEXT _fmt DEFAULT_COLOR_TEXT "\n",                          \
             time_str, __func__, _component, ##__VA_ARGS__);                        \
     } while(0)
 

@@ -4,10 +4,10 @@
 #include "logging.h"
 
 #if NODEBUG
-    #define ASSERT_FATAL(_component, _expr, ...)
+    #define ASSERT(_component, _expr, ...)
 #else
     // runtime checking
-    #define ASSERT_FATAL(_component, _expr, ...) do {                                  \
+    #define ASSERT(_component, _expr, ...) do {                                        \
         if (!(_expr)) {                                                                \
             printf("\n");                                                              \
             FATAL_LOG(                                                                 \
